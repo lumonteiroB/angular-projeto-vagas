@@ -1,0 +1,66 @@
+<section>
+  <div class="tabelaInt">
+    <table>
+      <thead>
+        <tr>
+          <th *ngFor="let nome of colunasTabela">
+            {{ nome }}
+          </th>
+          <th *ngIf="temDelete.length > 0"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let linha of linhasTabela; let ind = index">
+          <ng-container *ngFor="let info of linha">
+            <td *ngIf="!info.includes('https')">
+              {{ info }}
+            </td>
+            <td *ngIf="info.includes('https')">
+              <img [src]="info" class="imgsTab">
+            </td>
+          </ng-container>
+          <td *ngIf="temDelete.length > 0">
+            <button type="button" (click)="clickVisualizar(ind)">
+              <div class="iconeVisualizar"></div>
+            </button>
+          </td>
+          <ng-container *ngIf="!router.url.includes('resposta-questionario')">
+            <td *ngIf="temDelete.length > 0">
+              <button type="button" (click)="clickEditar(ind)">
+                <div class="iconeEditar"></div>
+              </button>
+            </td>
+          </ng-container>
+          <td *ngIf="temDelete.length > 0">
+            <button type="button" (click)="dinamicQuestUser( ind )">
+              <div class="iconeExcluir"></div>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<ng-container *ngIf="pergunta">
+  <div class="fundoModal"></div>
+  <div class="boxModal">
+    <ng-container *ngFor="let quests of perguntaUsuario">
+      <div class="cabecalho">
+        <h1 *ngIf="quests.tipo === 'title'">
+          {{quests.nome}}
+        </h1>
+        <span *ngIf="quests.tipo === 'subtitle'">
+          {{quests.nome}}
+        </span>
+      </div>
+    </ng-container>
+    <div class="buttons">
+      <ng-container *ngFor="let buttons of perguntaUsuario">
+        <button (click)="clickDelete(buttons.nome, idClicado)" *ngIf="buttons.tipo === 'button'"
+          [ngClass]="buttons.nome === 'Cancelar' ? 'buttonCinza' : 'buttonVermelho'">
+          {{buttons.nome}}
+        </button>
+      </ng-container>
+    </div>
+  </div>
+</ng-container>

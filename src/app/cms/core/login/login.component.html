@@ -1,0 +1,32 @@
+<section>
+  <div class="box">
+    <h1>
+      Login
+    </h1>
+    <form [formGroup]="formAuth" (ngSubmit)="submitForm()">
+      <div class="inputBox">
+        <input type="text" autofocus class="username" formControlName="user" 
+        [ngClass]="{'invalid' : (formAuth.controls['user'].status == 'INVALID' && formAuth.controls['user'].touched )}"
+        required>
+        <span>Username</span>
+      </div>
+      <div class="inputBox">
+        <input type="password" class="password" formControlName="senha"
+          [ngClass]="{'invalid' : (formAuth.controls['senha'].status == 'INVALID' && formAuth.controls['senha'].touched )}"
+          required>
+        <span>Senha</span>
+      </div>
+      <button type="button" class="btn-vermelho" [ngClass]="{'disabled' : (formAuth.invalid)}" (click)="submitForm()" [disabled]="formAuth.invalid">
+        Entrar
+      </button>
+    </form>
+
+  </div>
+</section>
+
+<ng-container *ngIf="logado">
+  <app-modal-utility [dados]="userNotFoundOrSucess" (onCloseOrLogin)="loginOk($event)"></app-modal-utility>
+</ng-container>
+<ng-container *ngIf="messageError">
+  <app-modal-utility [dados]="userNotFoundOrSucess" (onCloseOrLogin)="closeModal($event)"></app-modal-utility>
+</ng-container>

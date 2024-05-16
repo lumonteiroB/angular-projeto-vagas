@@ -1,0 +1,46 @@
+<section>
+  <div class="box">
+    <h1>
+      Sign Up
+    </h1>
+    <form [formGroup]="formAuth">
+      <div class="inputBox">
+        <input type="text" autofocus class="username" formControlName="user"
+          [ngClass]="{'invalid' : (formAuth.controls['user'].status == 'INVALID' && formAuth.controls['user'].touched )}"
+          required>
+        <span>Username</span>
+      </div>
+      <div class="inputBox">
+        <input type="text" autofocus class="username" formControlName="nomeComp"
+          [ngClass]="{'invalid' : (formAuth.controls['nomeComp'].status == 'INVALID' && formAuth.controls['nomeComp'].touched )}"
+          required>
+        <span>Nome completo</span>
+      </div>
+      <div class="inputBox">
+        <input type="password" autofocus class="username" formControlName="senha"
+          [ngClass]="{'invalid' : (formAuth.controls['senha'].status == 'INVALID' && formAuth.controls['senha'].touched )}"
+          required>
+        <span>Senha</span>
+      </div>
+      <div class="inputBox">
+        <input type="password" class="password" formControlName="confirmSenha"
+        [ngClass]="{ 'invalid': (formAuth.controls['confirmSenha'].status == 'INVALID' && formAuth.controls['confirmSenha'].touched) || (formAuth.errors && formAuth.controls['confirmSenha'].touched)}"
+          required>
+        <span>Confirme a senha</span>
+        <ng-container *ngIf="formAuth.errors">
+          <small class="erroConfirmSenha" *ngIf="formAuth.errors['passwordInvalido'] && formAuth.controls['confirmSenha'].touched">
+            As senhas não conferem
+          </small>
+        </ng-container>
+      </div>
+      <button class="btn-vermelho widthButton" type="button" (click)="autenticacaoUsername()"
+        [disabled]="formAuth.invalid" [ngClass]="{'disabled' : (formAuth.invalid)}">
+        Entrar
+      </button>
+    </form>
+  </div>
+</section>
+
+<ng-container *ngIf="mensagemUsuario">
+  <app-modal-utility [dados]="userNotFoundOrSucess" (onCloseOrLogin)="closeModal($event)"></app-modal-utility>
+</ng-container>

@@ -1,0 +1,38 @@
+@import '../../../../../scss/config-scss/rem-calc.scss';
+
+:host {
+
+  .contPage {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    flex-direction: column;
+    position: relative;
+
+    .btn-adicionar {
+      background-color: transparent;
+      background-image: url(../../../../../assets/icones-tabela/icone-adicionar.svg);
+      width: rem-calc(40);
+      height: rem-calc(40);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      right: rem-calc(60);
+      top: rem-calc(30);
+      cursor: pointer;
+    }
+
+    h1 {
+      font-size: rem-calc(26);
+      font-weight: 600;
+      padding: rem-calc(20) 0 rem-calc(30) 0;
+      text-align: center;
+    }
+
+    
+  }
+
+}

@@ -1,0 +1,11 @@
+<div class="contPage">
+  <h1>
+    Tabela Respostas Questionarios
+  </h1>
+  <app-tabela [colunasTabela]="['Username', 'Vaga', 'Respostas Questionario']" [linhasTabela]="linhaResp" [temDelete]="arrIds"
+    (onDelete)="deletarItem($event)" (onVisualizar)="visualizarItem($event)" (onEdit)="editarItem($event)"></app-tabela>
+</div>
+
+<ng-container *ngIf="modalVisualizar">
+  <app-modal-visualizar [dados]="linhaVisualizar" [titles]="['ID :', 'ID da Vaga :', 'ID do usuario :', 'Respostas :']" (onCloseOrLogin)="closeModalVisualizar($event)"></app-modal-visualizar>
+</ng-container> 

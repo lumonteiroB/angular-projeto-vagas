@@ -1,0 +1,45 @@
+@import '../../scss/config-scss/rem-calc.scss';
+
+:host {
+  .body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: calc(100vh - rem-calc(233));
+
+    .sessaoLogin {
+      padding: 0;
+    }
+
+    .sessaoHome {
+      padding-bottom: rem-calc(30);
+    }
+
+    .sessaoUsuario {
+      padding: rem-calc(30) 0;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 390px) {
+  
+    .body {
+      min-height: calc(100vh - rem-calc(295));
+  
+      .sessao {
+        padding: rem-calc(20) 0;
+      }
+    
+      .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+    }
+  
+  }
+}

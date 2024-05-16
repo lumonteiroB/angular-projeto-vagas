@@ -1,0 +1,86 @@
+@import '../../../../scss/config-scss/rem-calc.scss';
+
+:host {
+  footer {
+    background-color: var(--preto);
+    padding: rem-calc(20) rem-calc(45);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - rem-calc(90));
+    position: absolute;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: rem-calc(30);
+
+      .logo {
+        background-image: url(../../../../assets/icons/itlean.svg);
+        width: rem-calc(178);
+        height: rem-calc(60);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      a {
+        color: var(--branco);
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+
+    .rigth {
+      display: flex;
+      flex-direction: row;
+      gap: rem-calc(20);
+
+      .logoSocial {
+        width: rem-calc(50);
+        height: rem-calc(50);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        cursor: pointer;
+      }
+
+      .face {
+        background-image: url(../../../../assets/icons-socials/face.svg);
+
+      }
+
+      .twitter {
+        background-image: url(../../../../assets/icons-socials/twitter.svg);
+      }
+
+      .insta {
+        background-image: url(../../../../assets/icons-socials/insta.svg);
+      }
+
+      .youtube {
+        background-image: url(../../../../assets/icons-socials/youtube.svg);
+      }
+    }
+  }
+
+  @media screen and (max-width: 390px) {
+    footer {
+      padding: rem-calc(20) rem-calc(10);
+      flex-direction: column;
+      width: calc(100% - rem-calc(20));
+      gap: rem-calc(30);
+  
+      .left {
+        flex-direction: column;
+        gap: rem-calc(15);
+        align-items: center;
+      }
+  
+      .rigth {
+        gap: rem-calc(18);
+      }
+    }
+  }
+}

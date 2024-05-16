@@ -1,0 +1,34 @@
+<section>
+  <div class="banner"></div>
+  <div class="firstContainer">
+    <h3>
+      {{conteudoHome.home.categorias}}
+    </h3>
+    <div class="listCateg">
+      <ng-container *ngFor="let categ of allCategorias">
+        <div class="cardCateg" (click)="fromInternaCateg(categ)">
+          <img [src]="categ.icone" class="imgCateg">
+          <h4>
+            {{categ.categoria}}
+          </h4>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="secondContainer">
+    <h3>
+      {{conteudoHome.home.empresas}}
+    </h3>
+    <div class="listEmp">
+      <ng-container *ngFor="let emp of allEmpresas">
+        <div class="cardEmp" (click)="fromInternaEmpresa(emp)">
+          <img [src]="emp.logo" class="imgEmp">
+          <h4>
+            {{emp.nome}}
+          </h4>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+</section>

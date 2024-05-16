@@ -1,0 +1,195 @@
+@import '../../../scss/config-scss/rem-calc.scss';
+
+:host {
+  .body2 {
+    position: fixed;
+    box-shadow: 1px 1px 7px black;
+    min-height: 10vh;
+    bottom: 10%;
+    left: 5%;
+    background-color: white;
+    max-width: 22%;
+    min-width: 15%;
+    transform: translate(-50%, -50%);
+    gap: rem-calc(10);
+    padding: rem-calc(8) rem-calc(20);
+    font-size: rem-calc(15);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+    border-radius: rem-calc(8);
+  }
+
+  .bodySignUp {
+    position: fixed;
+    box-shadow: 1px 1px 7px black;
+    min-height: 10vh;
+    top: 50%;
+    right: 50%;
+    background-color: white;
+    max-width: 22%;
+    min-width: 15%;
+    transform: translate(-50%, -50%);
+    gap: rem-calc(10);
+    padding: rem-calc(8) rem-calc(20);
+    font-size: rem-calc(15);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+    border-radius: rem-calc(8);
+  }
+
+  .alert {
+    color: var(--vermelho);
+  }
+
+  .sucess {
+    color: var(--verde);
+  }
+
+  .body {
+    position: fixed;
+    border: 1.5px solid var(--preto);
+    box-shadow: 0px 0px 7px var(--preto);
+    min-height: 10vh;
+    top: 5%;
+    right: 5%;
+    background-color: white;
+    max-width: 22%;
+    min-width: 15%;
+    transform: translate(-50%, -50%);
+    gap: rem-calc(10);
+    padding: rem-calc(8) rem-calc(20);
+    font-size: rem-calc(17);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+    border-radius: rem-calc(8);
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 90%;
+    width: 90%;
+    justify-content: space-around;
+
+    button {
+      background-color: var(--vermelho);
+      color: white;
+      border-radius: rem-calc(5);
+      padding: rem-calc(5) rem-calc(15);
+      cursor: pointer;
+    }
+  }
+
+  .slideInDown {
+    -webkit-animation-name: slideInDown;
+    animation-name: slideInDown;
+    -webkit-animation-duration: .6s;
+    animation-duration: .6s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  @-webkit-keyframes slideInDown {
+    0% {
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+      visibility: visible;
+    }
+
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInDown {
+    0% {
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+      visibility: visible;
+    }
+
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+
+  /////////////////////////////////////////////////////////////
+
+  .slideInLeft {
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+    -webkit-animation-duration: .7s;
+    animation-duration: .7s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  @-webkit-keyframes slideInLeft {
+    0% {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+      visibility: visible;
+    }
+
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInLeft {
+    0% {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+      visibility: visible;
+    }
+
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+
+  .wobble {
+    -webkit-animation-name: wobble;
+    animation-name: wobble;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  @media screen and (min-width: 360px) {
+    .body2,
+    .body,
+    .bodySignUp {
+      width: rem-calc(230);   
+      max-width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .body2,
+    .body,
+    .bodySignUp {
+      width: rem-calc(300);   
+      max-width: 100%;
+    }
+  }
+}

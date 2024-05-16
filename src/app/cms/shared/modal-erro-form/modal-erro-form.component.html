@@ -1,0 +1,14 @@
+<div class="fundo"></div>
+<div class="sessao">
+  <button class="close" type="button" (click)="closeModal()">
+    &times;
+  </button>
+  <div class="cont">
+    <ng-container *ngFor="let text of dados">
+      <div class="text" *ngIf="text.tipo == 'texto'">{{text.nome}}</div>
+      <button class="buttonOk" *ngIf="text.tipo == 'button'" (click)="closeModal()">
+        {{text.nome}}
+      </button>
+    </ng-container>
+  </div>
+</div>

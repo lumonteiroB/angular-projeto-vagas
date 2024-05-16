@@ -1,0 +1,25 @@
+<header [ngClass]="mudarPosition === 'rotaUsuario' ? 'body1' : 'body2'">
+  <div class="logoOfRotaAdm">
+    <div class="logo" [routerLink]="['']">
+    </div>
+    <ng-container *ngIf="mudarPosition === 'rotaAdm'">
+        <li class="listaRotas">
+          <a [routerLink]="'/cms/tabela/empresa'" [ngClass]="{'active' : router.url.includes('empresa')}">Empresa</a>
+          <a [routerLink]="'/cms/tabela/vaga'" [ngClass]="{'active' : router.url.includes('vaga')}">Vaga</a>
+          <a [routerLink]="'/cms/tabela/categoria'" [ngClass]="{'active' : router.url.includes('categoria')}">Categoria</a>
+          <a [routerLink]="'/cms/tabela/usuario'" [ngClass]="{'active' : router.url.includes('usuario')}">Usuario</a>
+          <a [routerLink]="'/cms/tabela/resposta-questionario'" [ngClass]="{'active' : router.url.includes('resposta-questionario')}">Resposta Questionario</a>
+        </li>
+    </ng-container>
+  </div>
+  <div class="rigth">
+    <div class="boxIconUser">
+      <div class="iconUser"></div>
+    </div>
+    <div class="nomeUser" *ngIf="userLogado">
+      {{userLogado}}
+    </div>
+    <div class="logout" (click)="mudarRota()">
+    </div>
+  </div>
+</header>

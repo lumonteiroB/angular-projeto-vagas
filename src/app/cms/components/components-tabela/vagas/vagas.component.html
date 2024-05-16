@@ -1,0 +1,13 @@
+<div class="contPage">
+  <h1>
+    Tabela Vagas
+  </h1>
+  <button class="btn-adicionar" [routerLink]="['/cms/tabela/alterar/adicionar/vaga']">
+  </button>
+  <app-tabela [colunasTabela]="['Nome vaga', 'Empresa', 'Categoria', 'Quantidade']" [linhasTabela]="linhaEmpresas" [temDelete]="arrIds"
+    (onDelete)="deletarItem($event)" (onVisualizar)="visualizarItem($event)" (onEdit)="editarItem($event)"></app-tabela>
+</div>
+
+<ng-container *ngIf="modalVisualizar">
+  <app-modal-visualizar [dados]="linhaVisualizar" [titles]="['ID :', 'Vaga :', 'ID Empresa :', 'ID da categoria :', 'Salario :', 'Quantidade de vagas:', 'Local :', 'Publicado :', 'Descricao :', 'Expediente :', 'Contratação :', 'Infos Adicionais :', 'Questionario da vaga :']" (onCloseOrLogin)="closeModalVisualizar($event)"></app-modal-visualizar>
+</ng-container> 

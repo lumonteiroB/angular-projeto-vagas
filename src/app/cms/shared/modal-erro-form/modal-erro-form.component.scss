@@ -1,0 +1,55 @@
+@import '../../../../scss/config-scss/rem-calc.scss';
+
+:host {
+  .fundo {
+    background-color: rgba($color: #000000, $alpha: .6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .sessao {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    min-height: 10vh;
+    max-height: 40vh;
+    overflow-y: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--branco);
+    z-index: 10;
+    padding: rem-calc(20) rem-calc(30);
+    align-items: center;
+    border-radius: rem-calc(5);
+
+    .close {
+      font-size: rem-calc(25);
+      background-color: transparent;
+      position: fixed;
+      right: 3%;
+      top: 3%;
+      cursor: pointer;
+    }
+
+    .cont {
+      display: flex;
+      flex-direction: column;
+      gap: rem-calc(20);
+      align-items: center;
+
+      .buttonOk {
+        background-color: var(--vermelho);
+        padding: rem-calc(4) 0;
+        width: 40%;
+        border-radius: rem-calc(6); 
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}

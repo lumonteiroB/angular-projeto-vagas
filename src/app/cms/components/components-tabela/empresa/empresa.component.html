@@ -1,0 +1,13 @@
+<div class="contPage">
+  <h1>
+    Tabela Empresa
+  </h1>
+  <button class="btn-adicionar" [routerLink]="['/cms/tabela/alterar/adicionar/empresa']">
+  </button>
+  <app-tabela [colunasTabela]="['Nome empresas', 'Logo']" [linhasTabela]="linhaEmpresas" [temDelete]="arrIds"
+    (onDelete)="deletarItem($event)" (onVisualizar)="visualizarItem($event)" (onEdit)="editarItem($event)"></app-tabela>
+</div>
+
+<ng-container *ngIf="modalVisualizar">
+  <app-modal-visualizar [dados]="linhaVisualizar" [titles]="['ID :', 'Nome :', 'Logo :']" (onCloseOrLogin)="closeModalVisualizar($event)"></app-modal-visualizar>
+</ng-container>

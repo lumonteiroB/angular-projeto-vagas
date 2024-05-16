@@ -1,0 +1,162 @@
+@import '../../../../scss/config-scss/rem-calc.scss';
+
+:host {
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: rem-calc(30);
+    align-items: center;
+
+    .banner {
+      background-image: url(../../../../assets/bannerHome.png);
+      min-width: 100%;
+      height: rem-calc(260);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .firstContainer {
+      display: flex;
+      flex-direction: column;
+      gap: rem-calc(35);
+      align-items: center;
+      padding-top: rem-calc(20);
+
+      width: 90%;
+
+      h3 {
+        font-size: rem-calc(29);
+        font-weight: 600;
+        line-height: rem-calc(33.5);
+      }
+
+      .listCateg {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: rem-calc(30) rem-calc(40);
+
+        .cardCateg {
+          background-color: var(--cinza);
+          width: calc(33.3% - rem-calc(27));
+          height: rem-calc(200);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
+          border-radius: rem-calc(15);
+          cursor: pointer;
+
+          .imgCateg {
+            max-width: rem-calc(80);
+          }
+
+          h4 {
+            color: var(--branco);
+            font-size: rem-calc(23);
+            font-weight: 600;
+            line-height: rem-calc(27);
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .secondContainer {
+      @extend .firstContainer;
+      padding-top: rem-calc(30);
+
+      h3 {
+        @extend h3;
+      }
+
+      .listEmp {
+        @extend .listCateg;
+
+        .cardEmp {
+          @extend .cardCateg;
+
+          .imgEmp {
+            max-height: rem-calc(80);
+          }
+
+          h4 {
+            color: var(--branco);
+            font-size: rem-calc(23);
+            font-weight: 600;
+            line-height: rem-calc(27);
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 390px) {
+    section {
+      gap: rem-calc(20);
+
+      .banner {
+        height: rem-calc(150);
+      }
+
+      .firstContainer {
+        gap: rem-calc(20);
+        width: 95%;
+
+        h3 {
+          font-size: rem-calc(25);
+          font-weight: 600;
+          line-height: rem-calc(28.5);
+        }
+
+        .listCateg {
+          gap: rem-calc(20) rem-calc(20);
+
+          .cardCateg {
+            width: calc(50% - rem-calc(10));
+            height: rem-calc(150);
+
+            .imgCateg {
+              max-height: rem-calc(50);
+            }
+
+            h4 {
+              font-size: rem-calc(19);
+              font-weight: 600;
+              line-height: rem-calc(23.5);
+            }
+          }
+        }
+      }
+
+      .secondContainer {
+        @extend .firstContainer;
+        padding-top: rem-calc(30);
+
+        h3 {
+          @extend h3;
+        }
+
+        .listEmp {
+          @extend .listCateg;
+
+          .cardEmp {
+            @extend .cardCateg;
+
+            .imgEmp {
+              max-height: rem-calc(50);
+            }
+
+            h4 {
+              font-size: rem-calc(19);
+              line-height: rem-calc(23.5);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<div class="contPage">
+  <h1>
+    Tabela Categoria
+  </h1>
+  <button class="btn-adicionar" [routerLink]="['/cms/tabela/alterar/adicionar/categoria']">
+  </button>
+  <app-tabela [colunasTabela]="['Categoria', 'Icones']" [linhasTabela]="linhaCategorias" [temDelete]="arrIds"
+    (onDelete)="deletarItem($event)" (onVisualizar)="visualizarItem($event)" (onEdit)="editarItem($event)"></app-tabela>
+</div>
+
+<ng-container *ngIf="modalVisualizar">
+  <app-modal-visualizar [dados]="linhaVisualizar" [titles]="['ID :', 'Categoria :', 'Icone :']" (onCloseOrLogin)="closeModalVisualizar($event)"></app-modal-visualizar>
+</ng-container>

@@ -1,0 +1,176 @@
+@import '../../../scss/config-scss/rem-calc.scss';
+
+:host {
+  .body1 {
+    background-color: var(--preto);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem-calc(20) rem-calc(45);
+
+    .logo {
+      background-image: url(../../../assets/icons/itlean.svg);
+      width: rem-calc(140);
+      height: rem-calc(47);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      cursor: pointer;
+    }
+
+    .rigth {
+      display: flex;
+      align-items: center;
+      gap: rem-calc(10);
+
+      .boxIconUser {
+        width: rem-calc(19);
+        height: rem-calc(19);
+        background-color: white;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .iconUser {
+          background-image: url(../../../assets/icons/iconUser.png);
+          width: rem-calc(25);
+          height: rem-calc(25);
+          background-color: transparent;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+
+      .nomeUser {
+        color: white;
+        font-size: rem-calc(16);
+      }
+
+      .logout {
+        background-image: url(../../../assets/icons/logout.svg);
+        width: rem-calc(30);
+        height: rem-calc(30);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .body2 {
+    background-color: var(--preto);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem-calc(20) 0;
+    height: calc(100vh - rem-calc(40));
+    width: rem-calc(290);
+    position: fixed;
+
+    .logoOfRotaAdm {
+      display: flex;
+      flex-direction: column;
+      gap: rem-calc(40);
+      width: 100%;
+      align-items: center;
+
+      .logo {
+        background-image: url(../../../assets/icons/itlean.svg);
+        width: rem-calc(156);
+        height: rem-calc(52);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        cursor: pointer;
+      }
+
+
+      .listaRotas {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+
+        a {
+          color: var(--branco);
+          text-decoration: none;
+          font-size: rem-calc(20);
+          border-radius: rem-calc(5);
+          padding: rem-calc(12) 0;
+          width: 90%;
+          text-align: center;
+
+          &:hover {
+            background-color: var(--vermelho);
+            opacity: .9;
+          }
+        }
+
+        .active {
+          background-color: var(--vermelho);
+        }
+
+      }
+    }
+
+    .rigth {
+      display: flex;
+      align-items: center;
+      gap: rem-calc(10);
+
+      .boxIconUser {
+        width: rem-calc(19);
+        height: rem-calc(19);
+        background-color: white;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .iconUser {
+          background-image: url(../../../assets/icons/iconUser.png);
+          width: rem-calc(25);
+          height: rem-calc(25);
+          background-color: transparent;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+
+      .nomeUser {
+        color: white;
+        font-size: rem-calc(16);
+      }
+
+      .logout {
+        background-image: url(../../../assets/icons/logout.svg);
+        width: rem-calc(30);
+        height: rem-calc(30);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        cursor: pointer;
+      }
+
+
+    }
+  }
+
+
+  @media screen and (max-width: 390px) {
+    .body1 {
+      padding: rem-calc(18) rem-calc(20);
+      
+
+      .nomeUser {
+        display: none;
+      }
+    }
+  }
+}

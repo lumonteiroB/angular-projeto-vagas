@@ -1,0 +1,49 @@
+@import '../../../../../scss/config-scss/rem-calc.scss';
+
+:host {
+  .sessao {
+    padding: rem-calc(20) 0;
+    display: flex;
+    flex-direction: column;
+    gap: rem-calc(20);
+    align-items: center;
+    width: 90%;
+    margin: auto;
+
+    h1 {
+      font-size: rem-calc(28);
+    }
+
+    form {
+      display: flex;
+      gap: rem-calc(20);
+      flex-direction: column;
+      width: 100%;
+
+      .boxInput {
+        display: flex;
+        flex-direction: column;
+        gap: rem-calc(5);
+
+        input {
+          border: 1px solid var(--preto);
+          border-radius: rem-calc(10);
+          padding: rem-calc(5) rem-calc(10);
+          font-size: rem-calc(16);
+          font-weight: 400;
+        }
+
+        select {
+          border: 1px solid var(--preto);
+          border-radius: rem-calc(8);
+          padding: rem-calc(5) rem-calc(10);
+          max-width: 40%;
+        }
+      }
+    }
+  }
+
+  .invalid {
+    border: 1px solid var(--vermelho) !important;
+  }
+}

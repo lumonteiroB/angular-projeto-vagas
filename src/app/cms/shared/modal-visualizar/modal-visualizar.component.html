@@ -1,0 +1,22 @@
+<div class="fundo"></div>
+<div class="sessao">
+  <button type="button" (click)="closeModal()">
+    &times;
+  </button>
+  <div class="cont">
+    <ng-container *ngFor="let cont of dados; let i = index">
+      <ng-container *ngIf="!cont.includes('https')">
+        <div>
+          <b>{{titles[i]}}</b> 
+          <p>{{cont}}</p>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="cont.includes('https')">
+        <div>
+          <b>{{titles[i]}}</b>
+          <img [src]="cont" class="icone">
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>

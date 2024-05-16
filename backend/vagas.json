@@ -1,0 +1,731 @@
+{
+  "vagas": [
+    {
+      "vaga": "Gerente de TI",
+      "empresa": 1,
+      "categoria": 3,
+      "salario": {
+        "min": 15000,
+        "max": 20000
+      },
+      "local": {
+        "estado": "PR",
+        "cidade": "Londrina"
+      },
+      "expediente": {
+        "dias": "De segunda a sexta-feira",
+        "inicio": "09:00",
+        "fim": "18:00"
+      },
+      "publicacao": "2023-07-17T12:35:50.523Z",
+      "descricao": "Atividades: Gestão de todo TIME de IT Services (SOC/Service Desk / Especialistas / Projetos); Elaborar o planejamento estratégico de TI; Planejar e administrar os processos de TI garantindo que nossos clientes sejam atendidos de forma rápida e eficiente; Assegurar que a área de IT Services apoie os processos de negócio; Passar feedback para o clientes sobres atendimentos, problemas e melhorias; Conduzir a execução dos projetos dentro do prazo garantindo a satisfação do cliente; Medir, controlar e apresentar para nossos clientes os KPI's; Garantir a segurança da informação e a proteção de dados da nossa empresa e de nossos clientes; Apresentar para a diretoria indicadores de performance da equipe e planos de ação para melhoria contínua; Garantir treinamento e certificações da equipe.Graduação - Tecnologia da Informação ou áreas correlatas Experiências e qualificações: Inglês avançado será um diferencial Experiência em gestão de pessoas Ter experiência na área Ter atuado diretamento com feedback a clientes Treinamento/Certificação: ITIL e CoBIT",
+      "contratacao": "Prestador de serviços (PJ)",
+      "infosAdicionais": "Nosso cliente é uma empresa especializada em soluções para infraestrutura de TI corporativa, consultoria de TI, Cyber Security, LGPD e Full Outsourcing de TI, localizada em São José dos Pinhais com projeto de expansão para o Sudeste, filiais em operação no Canadá e Perú busca um GERENTE DE TI",
+      "quantidade": 1,
+      "id": 1,
+      "questionario": [
+        {
+          "tipoPergunta": "alternativaUnica",
+          "pergunta": "Quantos anos tem de experiência em TI?",
+          "alternativas": [
+            "-2 anos",
+            "2 a 4 anos",
+            "5+ anos"
+          ]
+        },
+        {
+          "tipoPergunta": "alternativaMultipla",
+          "pergunta": "Quais destes cargos você já trabalhou?",
+          "alternativas": [
+            "Desenvolvedor",
+            "Gerente",
+            "Comercial",
+            "Executivo"
+          ]
+        },
+        {
+          "tipoPergunta": "texto",
+          "pergunta": "Quais empresas você já trabalhou na área de TI?",
+          "alternativas": []
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "vaga": "Gerente de TI",
+      "empresa": 1,
+      "categoria": 3,
+      "salario": {
+        "min": 15000,
+        "max": 20000
+      },
+      "quantidade": 1,
+      "local": {
+        "estado": "PR",
+        "cidade": "Londrina"
+      },
+      "publicacao": "2023-07-17T12:35:50.523Z",
+      "descricao": "Atividades: Gestão de todo TIME de IT Services (SOC/Service Desk / Especialistas / Projetos); Elaborar o planejamento estratégico de TI; Planejar e administrar os processos de TI garantindo que nossos clientes sejam atendidos de forma rápida e eficiente; Assegurar que a área de IT Services apoie os processos de negócio; Passar feedback para o clientes sobres atendimentos, problemas e melhorias; Conduzir a execução dos projetos dentro do prazo garantindo a satisfação do cliente; Medir, controlar e apresentar para nossos clientes os KPI's; Garantir a segurança da informação e a proteção de dados da nossa empresa e de nossos clientes; Apresentar para a diretoria indicadores de performance da equipe e planos de ação para melhoria contínua; Garantir treinamento e certificações da equipe.Graduação - Tecnologia da Informação ou áreas correlatas Experiências e qualificações: Inglês avançado será um diferencial Experiência em gestão de pessoas Ter experiência na área Ter atuado diretamento com feedback a clientes Treinamento/Certificação: ITIL e CoBIT",
+      "expediente": {
+        "dias": "De domingo a domingo",
+        "inicio": "12:00",
+        "fim": "10:00"
+      },
+      "contratacao": "Prestador de serviços (PJ)",
+      "infosAdicionais": "Nosso cliente é uma empresa especializada em soluções para infraestrutura de TI corporativa, consultoria de TI, Cyber Security, LGPD e Full Outsourcing de TI, localizada em São José dos Pinhais com projeto de expansão para o Sudeste, filiais em operação no Canadá e Perú busca um GERENTE DE TI",
+      "questionario": [
+        {
+          "tipoPergunta": "alternativaUnica",
+          "pergunta": "Quantos anos tem de experiência em TI?",
+          "alternativas": [
+            "-2 anos",
+            "2 a 4 anos",
+            "5+ anos"
+          ]
+        },
+        {
+          "tipoPergunta": "alternativaMultipla",
+          "pergunta": "Quais destes cargos você já trabalhou?",
+          "alternativas": [
+            "Desenvolvedor",
+            "Gerente",
+            "Comercial",
+            "Executivo"
+          ]
+        },
+        {
+          "tipoPergunta": "texto",
+          "pergunta": "Quais empresas você já trabalhou na área de TI?",
+          "alternativas": []
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "vaga": "Gerente de Loja",
+      "empresa": 2,
+      "categoria": 2,
+      "salario": {
+        "min": 3000,
+        "max": 4000
+      },
+      "quantidade": 1,
+      "local": {
+        "estado": "PR",
+        "cidade": "Londrina"
+      },
+      "publicacao": "2023-07-17T12:35:50.523Z",
+      "descricao": "Atividades: Gestão de todo TIME de IT Services (SOC/Service Desk / Especialistas / Projetos); Elaborar o planejamento estratégico de TI; Planejar e administrar os processos de TI garantindo que nossos clientes sejam atendidos de forma rápida e eficiente; Assegurar que a área de IT Services apoie os processos de negócio; Passar feedback para o clientes sobres atendimentos, problemas e melhorias; Conduzir a execução dos projetos dentro do prazo garantindo a satisfação do cliente; Medir, controlar e apresentar para nossos clientes os KPI's; Garantir a segurança da informação e a proteção de dados da nossa empresa e de nossos clientes; Apresentar para a diretoria indicadores de performance da equipe e planos de ação para melhoria contínua; Garantir treinamento e certificações da equipe.Graduação - Tecnologia da Informação ou áreas correlatas Experiências e qualificações: Inglês avançado será um diferencial Experiência em gestão de pessoas Ter experiência na área Ter atuado diretamento com feedback a clientes Treinamento/Certificação: ITIL e CoBIT",
+      "expediente": {
+        "dias": "De segunda a sexta-feira",
+        "inicio": "09:00",
+        "fim": "18:00"
+      },
+      "contratacao": "Prestador de serviços (PJ)",
+      "infosAdicionais": "Nosso cliente é uma empresa especializada em soluções para infraestrutura de TI corporativa, consultoria de TI, Cyber Security, LGPD e Full Outsourcing de TI, localizada em São José dos Pinhais com projeto de expansão para o Sudeste, filiais em operação no Canadá e Perú busca um GERENTE DE TI",
+      "questionario": [
+        {
+          "tipoPergunta": "alternativaUnica",
+          "pergunta": "Quantos anos tem de experiência em TI?",
+          "alternativas": [
+            "-2 anos",
+            "2 a 4 anos",
+            "5+ anos"
+          ]
+        },
+        {
+          "tipoPergunta": "alternativaMultipla",
+          "pergunta": "Quais destes cargos você já trabalhou?",
+          "alternativas": [
+            "Desenvolvedor",
+            "Gerente",
+            "Comercial",
+            "Executivo"
+          ]
+        },
+        {
+          "tipoPergunta": "texto",
+          "pergunta": "Quais empresas você já trabalhou na área de TI?",
+          "alternativas": []
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "vaga": "Estagiario",
+      "empresa": 1,
+      "categoria": 3,
+      "salario": {
+        "min": 500,
+        "max": 600
+      },
+      "quantidade": 1,
+      "local": {
+        "estado": "SC",
+        "cidade": "Blumenal"
+      },
+      "publicacao": "2023-07-17T12:35:50.523Z",
+      "descricao": "Atividades: faz tudo e mais um pouco.",
+      "expediente": {
+        "dias": "De segunda a sexta-feira",
+        "inicio": "09:00",
+        "fim": "18:00"
+      },
+      "contratacao": "Prestador de serviços (PJ)",
+      "infosAdicionais": "Vai ralar em",
+      "questionario": [
+        {
+          "tipoPergunta": "alternativaUnica",
+          "pergunta": "Quantos anos tem de experiência em TI?",
+          "alternativas": [
+            "-2 anos",
+            "2 a 4 anos",
+            "5+ anos"
+          ]
+        },
+        {
+          "tipoPergunta": "alternativaMultipla",
+          "pergunta": "Quais destes cargos você já trabalhou?",
+          "alternativas": [
+            "Desenvolvedor",
+            "Gerente",
+            "Comercial",
+            "Executivo"
+          ]
+        },
+        {
+          "tipoPergunta": "texto",
+          "pergunta": "Quais empresas você já trabalhou na área de TI?",
+          "alternativas": []
+        }
+      ]
+    },
+    {
+      "vaga": "Vendedor",
+      "empresa": 7,
+      "categoria": 2,
+      "salario": {
+        "min": 1800,
+        "max": 2000
+      },
+      "local": {
+        "estado": "SP",
+        "cidade": "Sao Paulo"
+      },
+      "expediente": {
+        "dias": "De segunda a sabado",
+        "inicio": "09:00",
+        "fim": "18:00"
+      },
+      "publicacao": "2023-07-20T12:35:50.523Z",
+      "descricao": "Fazer a prospecção ativa de clientes, por meio de telefone, whatsapp, redes sociais e pontos físicos estratégicos. Apresentar os imóveis aos potenciais clientes presencial ou virtualmente. Entender o perfil dos clientes e fazer sugestões de outros imóveis que podem ser de seu interesse. Visitar unidades que serão colocadas à venda ou para locação para checar se está tudo de acordo com o padrão da imobiliária.",
+      "contratacao": "CLT",
+      "infosAdicionais": "Salario fixo + comissão, escala 2 folgas por semana (domingo fixo)",
+      "quantidade": 3,
+      "id": 5,
+      "questionario": [
+        {
+          "tipoPergunta": "alternativaUnica",
+          "pergunta": "Quantos anos tem de experiência em Vendas?",
+          "alternativas": [
+            "-2 anos",
+            "2 a 4 anos",
+            "5+ anos"
+          ]
+        },
+        {
+          "tipoPergunta": "alternativaMultipla",
+          "pergunta": "Você ja trabalhou em algum destes cargos?",
+          "alternativas": [
+            "Recepcionista",
+            "Administativo",
+            "Nenhum"
+          ]
+        },
+        {
+          "tipoPergunta": "alternativaMultipla",
+          "pergunta": "Conte-nos como soube da nossa vaga",
+          "alternativas": [
+            "Indicação",
+            "Linkedin",
+            "Redes Sociais",
+            "Por alguma pessoa que nao trabalha na empresa"
+          ]
+        },
+        {
+          "tipoPergunta": "texto",
+          "pergunta": "Quais empresas você já trabalhou na área de Vendas?",
+          "alternativas": []
+        },
+        {
+          "tipoPergunta": "texto",
+          "pergunta": "Quais empresas você já trabalhou na área de Vendas?",
+          "alternativas": []
+        }
+      ]
+    },
+    {
+      "vaga": "Analista Marketing",
+      "empresa": 6,
+      "categoria": 6,
+      "salario": {
+        "min": 4000,
+        "max": 4500
+      },
+      "local": {
+        "estado": "SP",
+        "cidade": "São Paulo"
+      },
+      "expediente": {
+        "dias": "De segunda a sexta-feira",
+        "inicio": "08:00",
+        "fim": "17:00"
+      },
+      "publicacao": "2023-07-30T12:35:50.523Z",
+      "descricao": "Fazer estudo de mercado e de concorrência (benchmarking). Auxiliar nas ações de branding da marca, visando fortalecer a imagem da empresa. Criar estratégias para cada parte do funil de vendas no contexto digital. Otimizar o trabalho de SEO das páginas da empresa, para que estejam sempre com boa visibilidade nas ferramentas de busca. Elaborar ações que estreitem o relacionamento entre empresa e cliente nos meios digitais. Montar estratégias de inbound marketing, gerando conteúdo de valor para as diferentes plataformas e para os diferentes estágios da jornada dos consumidores. Com base no comportamento do consumidor, elaborar materiais para uso da equipe comercial, tanto para captação de leads quanto para retenção de clientes. Montar o calendário editorial da marca e estar em conversa muito próxima com os criadores de conteúdo, para que os materiais sejam produzidos de acordo com as diretrizes estabelecidas. Fazer o levantamento das métricas, analisá-las e tornar o estudo visível para a empresa, gerando insumos para que as outras equipes pensem em próximos passos.",
+      "contratacao": "CLT",
+      "infosAdicionais": "Home office, Vale-alimentação ou refeição, Seguro saúde, Seguro odontológico, Seguro de vida, Day off no aniversário, Short friday, Incentivo educacional, Participação nos lucros e resultados",
+      "quantidade": 1,
+      "id": 6,
+      "questionario": [
+        {
+          "tipoPergunta": "alternativaUnica",
+          "pergunta": "Quantos anos tem de experiência em Marketing?",
+          "alternativas": [
+            "-2 anos",
+            "2 a 4 anos",
+            "5+ anos"
+          ]
+        },
+        {
+          "tipoPergunta": "alternativaMultipla",
+          "pergunta": "Quais destes cargos você já trabalhou?",
+          "alternativas": [
+            "Desenvolvedor",
+            "Gerente",
+            "Comercial",
+            "Executivo"
+          ]
+        },
+        {
+          "tipoPergunta": "texto",
+          "pergunta": "Quais empresas você já trabalhou na área de Marketing?",
+          "alternativas": []
+        },
+        {
+          "tipoPergunta": "texto",
+          "pergunta": "pq?",
+          "alternativas": []
+        }
+      ]
+    },
+    {
+      "vaga": "Estagiario",
+      "empresa": 5,
+      "categoria": 5,
+      "salario": {
+        "min": 500,
+        "max": 600
+      },
+      "local": {
+        "estado": "SC",
+        "cidade": "Blumenal"
+      },
+      "expediente": {
+        "dias": "De segunda a sexta-feira",
+        "inicio": "09:00",
+        "fim": "18:00"
+      },
+      "publicacao": "2023-07-17T12:35:50.523Z",
+      "descricao": "Atividades: faz tudo e mais um pouco.",
+      "contratacao": "Prestador de serviços (PJ)",
+      "infosAdicionais": "Vai ralar em",
+      "quantidade": 1,
+      "id": 8,
+      "questionario": [
+        {
+          "tipoPergunta": "alternativaUnica",
+          "pergunta": "Quantos anos tem de experiência em TI?",
+          "alternativas": [
+            "-2 anos",
+            "2 a 4 anos",
+            "5+ anos"
+          ]
+        },
+        {
+          "tipoPergunta": "alternativaMultipla",
+          "pergunta": "Quais destes cargos você já trabalhou?",
+          "alternativas": [
+            "Desenvolvedor",
+            "Gerente",
+            "Comercial",
+            "Executivo"
+          ]
+        },
+        {
+          "tipoPergunta": "alternativaUnica",
+          "pergunta": "Quais empresas você já trabalhou na área de TI?",
+          "alternativas": [
+            "pq"
+          ]
+        }
+      ]
+    }
+  ],
+  "categorias": [
+    {
+      "id": 1,
+      "categoria": "Administrativo",
+      "icone": "https://assets.catho.com.br/app-front-home-prod/public/_next/static/images/icon-a50d8f8149e3678001a945907e23f9b0.png"
+    },
+    {
+      "id": 2,
+      "categoria": "Vendas",
+      "icone": "https://assets.catho.com.br/app-front-home-prod/public/_next/static/images/icon-a50d8f8149e3678001a945907e23f9b0.png"
+    },
+    {
+      "id": 3,
+      "categoria": "Tecnologia",
+      "icone": "https://assets.catho.com.br/app-front-home-prod/public/_next/static/images/icon-a50d8f8149e3678001a945907e23f9b0.png"
+    },
+    {
+      "id": 4,
+      "categoria": "Logística",
+      "icone": "https://assets.catho.com.br/app-front-home-prod/public/_next/static/images/icon-a50d8f8149e3678001a945907e23f9b0.png"
+    },
+    {
+      "id": 5,
+      "categoria": "Farmácia",
+      "icone": "https://assets.catho.com.br/app-front-home-prod/public/_next/static/images/icon-a50d8f8149e3678001a945907e23f9b0.png"
+    },
+    {
+      "id": 6,
+      "categoria": "Marketing",
+      "icone": "https://assets.catho.com.br/app-front-home-prod/public/_next/static/images/icon-a50d8f8149e3678001a945907e23f9b0.png"
+    },
+    {
+      "id": 7,
+      "categoria": "Categoria ex",
+      "icone": "https://cdn-icons-png.flaticon.com/512/4844/4844589.png"
+    }
+  ],
+  "empresa": [
+    {
+      "id": 1,
+      "nome": "Empresa de TI",
+      "logo": "https://static.catho.com.br/images/emp/logotipos/609143.gif"
+    },
+    {
+      "id": 2,
+      "nome": "Loja Roupa",
+      "logo": "https://static.catho.com.br/images/emp/logotipos/609143.gif"
+    },
+    {
+      "id": 3,
+      "nome": "Loja Carro",
+      "logo": "https://static.catho.com.br/images/emp/logotipos/609143.gif"
+    },
+    {
+      "id": 4,
+      "nome": "Empresa Logística",
+      "logo": "https://static.catho.com.br/images/emp/logotipos/609143.gif"
+    },
+    {
+      "id": 5,
+      "nome": "Empresa Farmácia",
+      "logo": "https://static.catho.com.br/images/emp/logotipos/609143.gif"
+    },
+    {
+      "id": 6,
+      "nome": "Empresa Marketing",
+      "logo": "https://static.catho.com.br/images/emp/logotipos/609143.gif"
+    },
+    {
+      "id": 7,
+      "nome": "Empresa Imobiliária",
+      "logo": "https://static.catho.com.br/images/emp/logotipos/609143.gif"
+    },
+    {
+      "id": 8,
+      "nome": "Teste",
+      "logo": "https://cdn-icons-png.flaticon.com/512/4844/4844589.png"
+    },
+    {
+      "id": 9,
+      "nome": "Empresa Ex",
+      "logo": "https://cdn-icons-png.flaticon.com/512/4844/4844589.png"
+    }
+  ],
+  "respostasQuestionario": [
+    {
+      "id": 1,
+      "idDaVaga": 1,
+      "idUsuario": 1,
+      "respostas": [
+        [
+          "5+ anos"
+        ],
+        [
+          "Gerente",
+          "Comercial"
+        ],
+        [
+          "Empresa de TI"
+        ]
+      ]
+    },
+    {
+      "id": 2,
+      "idDaVaga": 1,
+      "idUsuario": 1,
+      "respostas": [
+        [
+          "-2 anos"
+        ],
+        [
+          "Desenvolvedor",
+          "Executivo"
+        ],
+        [
+          "IT Lean"
+        ]
+      ]
+    },
+    {
+      "id": 15,
+      "idDaVaga": 3,
+      "idUsuario": 3,
+      "respostas": [
+        [
+          "-2 anos"
+        ],
+        [
+          "Executivo"
+        ],
+        [
+          "Açucar União"
+        ]
+      ]
+    },
+    {
+      "id": 16,
+      "idDaVaga": 4,
+      "idUsuario": 1,
+      "respostas": [
+        [
+          "5+ anos"
+        ],
+        [
+          "Desenvolvedor"
+        ],
+        [
+          "Microsoft e google"
+        ]
+      ]
+    },
+    {
+      "id": 23,
+      "idDaVaga": 6,
+      "idUsuario": 4,
+      "respostas": [
+        [
+          "2 a 4 anos"
+        ],
+        [
+          "Comercial",
+          "Desenvolvedor",
+          "Gerente"
+        ],
+        [
+          "aaaaaaaaaaaaaaaaaaa"
+        ]
+      ]
+    },
+    {
+      "id": 24,
+      "idDaVaga": 6,
+      "idUsuario": 4,
+      "respostas": [
+        [
+          "2 a 4 anos"
+        ],
+        [
+          "Comercial",
+          "Desenvolvedor",
+          "Gerente"
+        ],
+        [
+          "aaaaaaaaaaaaaaaaaaa"
+        ]
+      ]
+    },
+    {
+      "id": 25,
+      "idDaVaga": 1,
+      "idUsuario": 6,
+      "respostas": [
+        [
+          "-2 anos"
+        ],
+        [
+          "Desenvolvedor",
+          "Gerente",
+          "Comercial"
+        ],
+        [
+          "aaaaaaaaaaa"
+        ]
+      ]
+    },
+    {
+      "id": 26,
+      "idDaVaga": 1,
+      "idUsuario": 6,
+      "respostas": [
+        [
+          "5+ anos"
+        ],
+        [
+          "Comercial"
+        ],
+        [
+          "aaaaaaaaaaaaaaaaa"
+        ]
+      ]
+    },
+    {
+      "id": 27,
+      "idDaVaga": 1,
+      "idUsuario": 7,
+      "respostas": [
+        [
+          "-2 anos"
+        ],
+        [
+          "Gerente",
+          "Comercial"
+        ],
+        [
+          "aaaaaaaaaaaaa"
+        ]
+      ]
+    },
+    {
+      "id": 28,
+      "idDaVaga": 10,
+      "idUsuario": 1,
+      "respostas": [
+        [
+          "sasasa"
+        ],
+        [
+          "ashusauhsa"
+        ],
+        [
+          "uashuhuahsuhsa",
+          "ashuhushusah"
+        ],
+        [
+          "ashusahsuaas"
+        ],
+        [
+          "asassauhsauhsauh"
+        ]
+      ]
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "username": "matheusmp",
+      "nomeCompleto": "Matheus M. Pinheiro",
+      "tipo": "cliente"
+    },
+    {
+      "id": 2,
+      "nomeCompleto": "Anderson Dias",
+      "username": "andersonDias",
+      "tipo": "admin"
+    },
+    {
+      "id": 3,
+      "username": "lucianobm",
+      "nomeCompleto": "luciano",
+      "tipo": "admin"
+    },
+    {
+      "id": 4,
+      "nomeCompleto": "Caio Nunes",
+      "username": "CaioNS",
+      "tipo": "cliente"
+    },
+    {
+      "id": 5,
+      "nomeCompleto": "Vinícius Souza Santos",
+      "username": "W4ffles",
+      "tipo": "cliente"
+    },
+    {
+      "id": 6,
+      "nomeCompleto": "agusto biti",
+      "username": "agusto",
+      "tipo": "cliente"
+    },
+    {
+      "id": 7,
+      "nomeCompleto": "Luiz Navarro",
+      "username": "navarro",
+      "tipo": "cliente"
+    }
+  ],
+  "fazerLogin": [
+    {
+      "id": 1,
+      "username": "matheusmp",
+      "idUsuario": 1,
+      "senha": "123abc"
+    },
+    {
+      "id": 2,
+      "username": "andersonDias",
+      "senha": "123abc",
+      "idUsuario": 2
+    },
+    {
+      "id": 3,
+      "username": "lucianobm",
+      "idUsuario": 3,
+      "senha": "123abc"
+    },
+    {
+      "username": "CaioNS",
+      "senha": "12345678",
+      "id": 4,
+      "idUsuario": 4
+    },
+    {
+      "username": "W4ffles",
+      "senha": "Vinicius@2",
+      "id": 5,
+      "idUsuario": 5
+    },
+    {
+      "username": "agusto",
+      "senha": "123abc",
+      "id": 6,
+      "idUsuario": 6
+    },
+    {
+      "username": "navarro",
+      "senha": "123abc",
+      "id": 7,
+      "idUsuario": 7
+    }
+  ],
+  "conteudoSite": {
+    "home": {
+      "categorias": "Vagas por categorias",
+      "empresas": "Vagas por empresas"
+    }
+  }
+}

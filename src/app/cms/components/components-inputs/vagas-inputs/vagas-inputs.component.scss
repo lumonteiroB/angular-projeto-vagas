@@ -1,0 +1,124 @@
+@import '../../../../../scss/config-scss/rem-calc.scss';
+
+:host {
+  .sessao {
+    padding: rem-calc(20) 0;
+    display: flex;
+    flex-direction: column;
+    gap: rem-calc(20);
+    align-items: center;
+    width: 90%;
+    margin: auto;
+
+    h1 {
+      font-size: rem-calc(28);
+    }
+
+    form {
+      display: flex;
+      gap: rem-calc(20);
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 100%;
+
+      .select {
+        border: 1px solid var(--preto);
+        border-radius: rem-calc(8);
+        padding: rem-calc(5) rem-calc(10);
+        max-width: 40%;
+      }
+
+      .boxInput {
+        display: flex;
+        flex-direction: row;
+        gap: rem-calc(5);
+        width: 100%;
+        align-items: center;
+
+        input {
+          border: 1px solid var(--preto);
+          border-radius: rem-calc(10);
+          padding: rem-calc(5) rem-calc(10);
+          font-size: rem-calc(16);
+          font-weight: 400;
+          width: 100%;
+        }
+
+        textarea {
+          border: 1px solid var(--preto);
+          border-radius: rem-calc(10);
+          padding: rem-calc(5) rem-calc(10);
+          font-size: rem-calc(16);
+          width: 100%;
+          resize: none;
+        }
+      }
+
+      .boxNomal {
+        display: flex;
+        flex-direction: column;
+        gap: rem-calc(20);
+
+        .quest {
+          display: flex;
+          flex-direction: column;
+          gap: rem-calc(5);
+          border: 1px solid var(--preto);
+          padding: rem-calc(20);
+
+          input {
+            border: 1px solid var(--preto);
+            border-radius: rem-calc(10);
+            padding: rem-calc(5) rem-calc(10);
+            font-size: rem-calc(16);
+            font-weight: 400;
+            width: 88%;
+            max-width: 100%;
+          }
+
+          select {
+            @extend .select;
+          }
+
+          .contQuestAlternativa {
+            display: flex;
+            flex-direction: column;
+            gap: rem-calc(10);
+
+            .contAlternativa {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: nowrap;
+              gap: rem-calc(10);
+            }
+          }
+        }
+      }
+
+      .buttonAdd {
+        background-color: var(--verde);
+        border-radius: rem-calc(5);
+        padding: rem-calc(5) 0;
+        color: white;
+        width: 50%;
+      }
+
+      .buttonExcluir {
+        background-color: var(--vermelho);
+        border-radius: rem-calc(5);
+        padding: rem-calc(3) rem-calc(7);
+        color: white;
+      }
+
+      .divisao {
+        display: flex;
+        flex-direction: column;
+        gap: rem-calc(5);
+      }
+    }
+  }
+
+  .invalid {
+    border: 1px solid var(--vermelho) !important;
+  }
+}

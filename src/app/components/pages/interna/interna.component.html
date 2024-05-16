@@ -1,0 +1,43 @@
+<section>
+  <div class="cabecalho">
+    <h1>
+      {{titleCabecalhoComp}}: <b>{{titleCabecalho}}</b>
+    </h1>
+    <h2>
+      Mostrando {{listVagas.length}} {{listVagas.length === 1 ? 'resultado' : 'resultados'}}
+    </h2>
+  </div>
+  <div class="listCard">
+    <ng-container *ngFor="let vagas of listVagas">
+      <div class="card">
+        <div class="dadosCard">
+          <div class="leftCard">
+            <h3>
+              {{vagas.vaga}}
+            </h3>
+            <h4>
+              {{empresaNome(vagas.empresa)}}
+            </h4>
+            <p>
+              De R${{vagas.salario.min}} a R${{vagas.salario.max}}
+            </p>
+          </div>
+          <div class="rigthCard">
+            <h3>
+              {{vagas.quantidade}} {{vagas.quantidade === 1 ? 'vaga' : 'vagas'}}
+            </h3>
+            <p>
+              {{vagas.local.cidade}} - {{vagas.local.estado}}
+            </p>
+            <p>
+              Publicada em {{vagas.publicacao | date: 'dd/MM/yyyy'}}
+            </p>
+          </div>
+        </div>
+        <button type="button" class="btn-blue" (click)="fromDetalhes(vagas.id)">
+          Conheça a vaga
+        </button>
+      </div>
+    </ng-container>
+  </div>
+</section>

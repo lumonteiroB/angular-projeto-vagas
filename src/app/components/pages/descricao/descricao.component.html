@@ -1,0 +1,128 @@
+<section>
+  <div class="contInf">
+    <div class="contInfLeft">
+      <h1>
+        {{dadosVaga.vaga}}
+      </h1>
+      <p>
+        De {{dadosVaga.salario.min | currency:'BRL' }} a {{dadosVaga.salario.max | currency:'BRL'}}
+      </p>
+    </div>
+    <div class="contInfRigth">
+      <h2>
+        {{dadosVaga.quantidade}} {{dadosVaga.quantidade === 1 ? 'vaga' : 'vagas'}}
+      </h2>
+      <p>
+        {{dadosVaga.local.cidade}} - {{dadosVaga.local.estado}}
+      </p>
+      <p>
+        Publicada em {{dadosVaga.publicacao | date: 'dd/MM/yyyy'}}
+      </p>
+    </div>
+  </div>
+
+  <p class="textDescricao">
+    {{dadosVaga.descricao}}
+  </p>
+  <div class="dadosInfo">
+    <div class="dadosInfoLine">
+      <b>Horario: </b>
+      <small>{{dadosVaga.expediente.dias}} das {{dadosVaga.expediente.inicio}} às
+        {{dadosVaga.expediente.fim}}
+      </small>
+    </div>
+    <div class="dadosInfoLine">
+      <b>Contratação: </b><small>{{dadosVaga.contratacao}}</small>
+    </div>
+    <div class="dadosInfoLine">
+      <b>Informações adicionais: </b><small>{{dadosVaga.infosAdicionais}}</small>
+    </div>
+  </div>
+  <div class="logoNome">
+    <img class="imgEmpresa" [src]="dadosEmpresa.logo" >
+    <b>
+      {{dadosEmpresa.nome}}
+    </b>
+  </div>
+  <button type="button" class="btn-blue" (click)="openModal()">
+    Responder ao questionário para se candidatar
+  </button>
+</section>
+<ng-container *ngIf="modalOpen">
+  <ng-container *ngIf="!logado">
+    <app-modal-utility [dados]="modalAvisoLogin" (onCloseOrLogin)="closeOrLogin($event)"></app-modal-utility>
+  </ng-container>
+  <ng-container *ngIf="logado">
+    <div class="fundoModal"></div>
+    <div class="modalQuest">
+      <div class="cabecalho">
+        <h1>
+          Questionário para {{dadosVaga.vaga}}
+        </h1>
+        <button type="button" (click)="closeModal()">
+          &times;
+        </button>
+      </div>
+      <div class="body">
+        <ng-container *ngFor="let questionario of dadosVaga.questionario; let arrayPerguntaIndex = index">
+          <div class="quests">
+            <ng-container *ngIf="questionario.tipoPergunta === 'alternativaMultipla'">
+              <h3>
+                {{questionario.pergunta}}
+              </h3>
+              <div class="boxCheck">
+                <ng-container *ngFor="let questAlternativasMult of questionario.alternativas">
+                  <label class="contQuest">{{questAlternativasMult}}
+                    <input type="checkbox" (click)="respUsuario(arrayPerguntaIndex, questAlternativasMult)">
+                    <span class="checkmark"></span>
+                  </label>
+                </ng-container>
+              </div>
+            </ng-container>
+            <ng-container *ngIf="questionario.tipoPergunta === 'alternativaUnica'">
+              <h3>
+                {{questionario.pergunta}}
+              </h3>
+              <div class="boxCheck">
+                <ng-container *ngFor="let questAlternativas of questionario.alternativas">
+                  <label class="contQuest">{{questAlternativas}}
+                    <input type="radio" name="{{arrayPerguntaIndex}}" (click)="respAltUnic(arrayPerguntaIndex, questAlternativas)">
+                    <span class="checkmark"></span>
+                  </label>
+                </ng-container>
+              </div>
+            </ng-container>
+            <ng-container *ngIf="questionario.tipoPergunta === 'texto'">
+              <h3>
+                {{questionario.pergunta}}
+              </h3>
+              <textarea cols="20" rows="6" [name]="arrayPerguntaIndex" placeholder="Escreva aqui..." #input
+                (keyup)="respText(arrayPerguntaIndex, input.value)"></textarea>
+                <ng-container *ngIf="mensagemTamanhoTexto && arrayPerguntaIndex == n">
+                  <small>{{mensagemTamanhoTexto}}</small>
+                </ng-container>
+            </ng-container>
+          </div>
+        </ng-container>
+        <button class="btn-blue" (click)="finalizarQuestionario()" type="button">
+          Finalizar
+        </button>
+      </div>
+      <ng-container *ngIf="modalInfoQuest">
+        <div class="fundoModalAvisoQuestOk"></div>
+        <div class="modalAvisoQuestOk">
+          <ng-container *ngFor="let aviso of modalAvisoLogin">
+            <h3 *ngIf="aviso.tipo == 'texto'">
+              {{aviso.nome}}
+            </h3>
+            <ng-container *ngIf="aviso.tipo == 'button'">
+              <button (click)="closeModalQuestOk(aviso.nome)" >
+                {{aviso.nome}}
+              </button>
+            </ng-container>
+          </ng-container>
+        </div>
+      </ng-container>
+    </div>
+  </ng-container>
+</ng-container>

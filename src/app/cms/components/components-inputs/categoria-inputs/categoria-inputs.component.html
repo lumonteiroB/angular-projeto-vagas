@@ -1,0 +1,26 @@
+<div class="sessao">
+  <h1>{{router.url.includes('adicionar') ? 'Adicionar Categoria' : 'Editar Categoria' }}</h1>
+  <form [formGroup]="formCateg" (ngSubmit)="editarCateg()">
+    <div class="boxInput">
+      <label>Nome da categoria</label>
+      <input type="text" required formControlName="nomeCateg" placeholder="Insira aqui..."
+      [ngClass]="{'invalid' : (formCateg.controls['nomeCateg'].status == 'INVALID' && formCateg.controls['nomeCateg'].touched )}">
+    </div>
+    <div class="boxInput">
+      <label>Link do icone</label>
+      <input type="text" required formControlName="iconeCateg" placeholder="Insira aqui..."
+      [ngClass]="{'invalid' : (formCateg.controls['iconeCateg'].status == 'INVALID' && formCateg.controls['iconeCateg'].touched )}">
+    </div>
+    <div class="btns">
+      <button *ngIf="isEdit" class="btn-editar" (click)="editarCateg()">Atualizar</button>
+      <button *ngIf="!isEdit" class="btn-adicionar" (click)="adicionarCateg()">Adicionar</button>
+    </div>
+  </form>
+</div>
+
+<ng-container *ngIf="erroNoForm">
+  <app-modal-erro-form [dados]="userNotFoundOrSucess" (onClose)="closeModalErroForm($event)"></app-modal-erro-form>
+</ng-container>
+<ng-container *ngIf="mensagemUsuario">
+  <app-modal-utility [dados]="userNotFoundOrSucess"></app-modal-utility>
+</ng-container>

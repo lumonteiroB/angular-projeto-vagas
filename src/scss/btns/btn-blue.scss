@@ -1,0 +1,13 @@
+.btn-blue {
+  background-color: rgba(0, 23, 227, 1);
+  color: white;
+  font-size: rem-calc(17);
+  padding: rem-calc(18) 0;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: rem-calc(5);
+
+  &:hover {
+    background-color: rgba(0, 23, 227, .9);
+  }
+}

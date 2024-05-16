@@ -1,0 +1,26 @@
+<div class="sessao">
+  <h1>{{router.url.includes('adicionar') ? 'Adicionar Empresa' : 'Editar Empresa' }}</h1>
+  <form [formGroup]="formEmpresa">
+    <div class="boxInput">
+      <label>Nome da empresa</label>
+      <input type="text" required formControlName="nome" placeholder="Insira aqui..."
+      [ngClass]="{'invalid' : (formEmpresa.controls['nome'].status == 'INVALID' && formEmpresa.controls['nome'].touched )}">
+    </div>
+    <div class="boxInput">
+      <label>Link do logo</label>
+      <input type="text" required formControlName="logo" placeholder="Insira aqui..."
+      [ngClass]="{'invalid' : (formEmpresa.controls['logo'].status == 'INVALID' && formEmpresa.controls['logo'].touched )}">
+    </div>
+    <div class="btns">
+      <button *ngIf="isEdit" class="btn-editar" (click)="editarEmpresa()">Atualizar</button>
+      <button *ngIf="!isEdit" class="btn-adicionar" (click)="adicionarEmpresa()">Adicionar</button>
+    </div>
+  </form>
+</div>
+
+<ng-container *ngIf="erroNoForm">
+  <app-modal-erro-form [dados]="userNotFoundOrSucess" (onClose)="closeModalErroForm($event)"></app-modal-erro-form>
+</ng-container>
+<ng-container *ngIf="mensagemUsuario">
+  <app-modal-utility [dados]="userNotFoundOrSucess"></app-modal-utility>
+</ng-container>

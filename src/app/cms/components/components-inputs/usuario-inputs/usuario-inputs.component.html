@@ -1,0 +1,43 @@
+<div class="sessao">
+  <h1>{{router.url.includes('adicionar') ? 'Adicionar Usuario' : 'Editar Usuario' }}</h1>
+  <form [formGroup]="formUsuario">
+    <div class="boxInput">
+      <label>Username</label>
+      <input type="text" required formControlName="username" placeholder="Insira aqui..."
+      [ngClass]="{'invalid' : (formUsuario.controls['username'].status == 'INVALID' && formUsuario.controls['username'].touched )}">
+    </div>
+    <div class="boxInput">
+      <label>Nome Completo</label>
+      <input type="text" required formControlName="nomeCompleto" placeholder="Insira aqui..."
+      [ngClass]="{'invalid' : (formUsuario.controls['nomeCompleto'].status == 'INVALID' && formUsuario.controls['nomeCompleto'].touched )}">
+    </div>
+    <div class="boxInput">
+      <label>Tipo de Acesso</label>
+      <select type="text" required [ngModelOptions]="{ standalone: true }" [(ngModel)]="acessoDefinido">
+        <option value="" selected>Selecione uma opção</option>
+        <ng-container *ngFor="let option of tipoAcesso">
+          <option value="{{option}}">
+            {{option}}
+          </option>
+        </ng-container>
+      </select>
+    </div>
+    <ng-container *ngIf="router.url.includes('adicionar')">
+      <div class="boxInput">
+        <label>Senha</label>
+        <input type="text" required [ngModelOptions]="{ standalone: true }" [(ngModel)]="senha" placeholder="Insira aqui...">
+      </div>
+    </ng-container>
+    <div class="btns">
+      <button *ngIf="isEdit" class="btn-editar" (click)="editarUsuario()">Atualizar</button>
+      <button *ngIf="!isEdit" class="btn-adicionar" (click)="adicionarUsuario()">Adicionar</button>
+    </div>
+  </form>
+</div>
+
+<ng-container *ngIf="erroNoForm">
+  <app-modal-erro-form [dados]="userNotFoundOrSucess" (onClose)="closeModalErroForm($event)"></app-modal-erro-form>
+</ng-container>
+<ng-container *ngIf="mensagemUsuario">
+  <app-modal-utility [dados]="userNotFoundOrSucess"></app-modal-utility>
+</ng-container>

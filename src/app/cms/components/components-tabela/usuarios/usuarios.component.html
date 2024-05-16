@@ -1,0 +1,13 @@
+<div class="contPage">
+  <h1>
+    Tabela Usuarios
+  </h1>
+  <button class="btn-adicionar" [routerLink]="['/cms/tabela/alterar/adicionar/usuario']">
+  </button>
+  <app-tabela [colunasTabela]="['Nome completo', 'Username', 'Tipo']" [linhasTabela]="linhaUser" [temDelete]="arrIds"
+    (onDelete)="deletarItem($event)" (onVisualizar)="visualizarItem($event)" (onEdit)="editarItem($event)"></app-tabela>
+</div>
+
+<ng-container *ngIf="modalVisualizar">
+  <app-modal-visualizar [dados]="linhaVisualizar" [titles]="['ID', 'Nome completo', 'Username', 'Tipo']" (onCloseOrLogin)="closeModalVisualizar($event)"></app-modal-visualizar>
+</ng-container>

@@ -1,0 +1,20 @@
+<div [ngClass]="router.url === '/login' 
+  || router.url === '/cms' 
+  || router.url === '/sign-up'  
+  ? 'slideInLeft body2' 
+  : 'slideInDown body'">
+  <ng-container *ngFor="let text of dados">
+    <div class="text" *ngIf="text.tipo == 'texto'">{{text.nome}}</div>
+  </ng-container>
+  <ng-container *ngFor="let text of dados">
+    <div class="alert" *ngIf="text.tipo == 'alert'">{{text.nome}}</div>
+  </ng-container>
+  <ng-container *ngFor="let text of dados">
+    <div class="sucess" *ngIf="text.tipo == 'sucess'">{{text.nome}}</div>
+  </ng-container>
+  <div class="buttons">
+    <ng-container *ngFor="let text2 of dados">
+      <button type="button" (click)="closeOrLogin(text2.nome)" *ngIf="text2.tipo == 'button'">{{text2.nome}}</button>
+    </ng-container>
+  </div>
+</div>

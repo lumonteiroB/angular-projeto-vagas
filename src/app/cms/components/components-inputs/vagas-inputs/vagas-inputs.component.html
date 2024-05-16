@@ -1,0 +1,133 @@
+<div class="sessao">
+  <h1>{{router.url.includes('adicionar') ? 'Adicionar Resposta' : 'Editar Resposta' }}</h1>
+  <form [formGroup]="formVaga">
+    <div class="boxInput">
+      <label>Vaga</label>
+      <input type="text" class="inteiro" required formControlName="vaga" placeholder="Digite aqui..."
+        [ngClass]="{'invalid' : (formVaga.controls['vaga'].status == 'INVALID' && formVaga.controls['vaga'].touched )}">
+    </div>
+    <div class="boxInput">
+      <label>Categoria</label>
+      <select class="select" type="text" required [ngModelOptions]="{ standalone: true }" [(ngModel)]="categoriaId">
+        <option value="0" selected>Selecione uma opção</option>
+        <ng-container *ngFor="let categoria of selecaoCateg">
+          <option value="{{categoria.id}}">
+            {{categoria.categoria}}
+          </option>
+        </ng-container>
+      </select>
+      <label>Empresa</label>
+      <select class="select" type="text" required [ngModelOptions]="{ standalone: true }" [(ngModel)]="empresaId">
+        <option value="0" selected>Selecione uma opção</option>
+        <ng-container *ngFor="let empresa of selecaoEmpresa">
+          <option value="{{empresa.id}}">
+            {{empresa.nome}}
+          </option>
+        </ng-container>
+      </select>
+    </div>
+    <div class="divisao">
+      <label>Salario:</label>
+      <div class="boxInput">
+        <label>Minimo</label>
+        <input type="text" class="metade" required formControlName="min" placeholder="Digite aqui..."
+          [ngClass]="{'invalid' : (formVaga.controls['min'].status == 'INVALID' && formVaga.controls['min'].touched )}">
+        <label>Maximo</label>
+        <input type="text" class="metade" required formControlName="max" placeholder="Digite aqui..."
+          [ngClass]="{'invalid' : (formVaga.controls['max'].status == 'INVALID' && formVaga.controls['max'].touched )}">
+      </div>
+    </div>
+    <div class="boxInput">
+      <label>Quantidade</label>
+      <input type="text" required formControlName="quantidade" placeholder="Digite aqui..."
+        [ngClass]="{'invalid' : (formVaga.controls['quantidade'].status == 'INVALID' && formVaga.controls['quantidade'].touched )}">
+    </div>
+    <div class="divisao">
+      <label>Localização</label>
+      <div class="boxInput">
+        <label>Cidade</label>
+        <input type="text" class="metade" required formControlName="cidade" placeholder="Digite aqui..."
+          [ngClass]="{'invalid' : (formVaga.controls['cidade'].status == 'INVALID' && formVaga.controls['cidade'].touched )}">
+        <label>Estado</label>
+        <input type="text" class="metade" required formControlName="estado" placeholder="Digite aqui..."
+          [ngClass]="{'invalid' : (formVaga.controls['estado'].status == 'INVALID' && formVaga.controls['estado'].touched )}">
+      </div>
+    </div>
+    <div class="boxInput">
+      <label>Descrição</label>
+      <textarea rows="7" type="text" required formControlName="descricao" placeholder="Digite aqui..."
+        [ngClass]="{'invalid' : (formVaga.controls['descricao'].status == 'INVALID' && formVaga.controls['descricao'].touched )}"></textarea>
+    </div>
+    <div class="divisao">
+      <label>Expedientente:</label>
+      <div class="boxInput">
+        <label>Dias da semana</label>
+        <input type="text" class="umTerco" required formControlName="dias" placeholder="Digite aqui..."
+          [ngClass]="{'invalid' : (formVaga.controls['dias'].status == 'INVALID' && formVaga.controls['dias'].touched )}">
+
+        <label>Inicio</label>
+        <input type="text" class="umTerco" required formControlName="inicio" placeholder="Digite aqui..."
+          [ngClass]="{'invalid' : (formVaga.controls['inicio'].status == 'INVALID' && formVaga.controls['inicio'].touched )}">
+
+        <label>Fim</label>
+        <input type="text" class="umTerco" required formControlName="fim" placeholder="Digite aqui..."
+          [ngClass]="{'invalid' : (formVaga.controls['fim'].status == 'INVALID' && formVaga.controls['fim'].touched )}">
+      </div>
+    </div>
+    <div class="boxInput">
+      <label>Tipo de contratação</label>
+      <input type="text" required formControlName="contratacao" placeholder="Digite aqui..."
+        [ngClass]="{'invalid' : (formVaga.controls['contratacao'].status == 'INVALID' && formVaga.controls['contratacao'].touched )}">
+    </div>
+    <div class="boxInput">
+      <label>Informações adicionais</label>
+      <textarea type="text" rows="4" required formControlName="infosAdicionais" placeholder="Digite aqui..."
+        [ngClass]="{'invalid' : (formVaga.controls['infosAdicionais'].status == 'INVALID' && formVaga.controls['infosAdicionais'].touched )}"></textarea>
+    </div>
+    <div class="boxNomal">
+      <label>Questionario da vaga:</label>
+      <ng-container *ngFor="let quests of formModel; let questIndex = index">
+        <div class="quest">
+          <label>Tipo pergunta</label>
+          <select type="text" required [ngModelOptions]="{ standalone: true }" [(ngModel)]="quests.tipoPergunta">
+            <ng-container *ngFor="let tipoQuest of tiposPergunta">
+              <option value="{{tipoQuest}}">
+                {{tipoQuest}}
+              </option>
+            </ng-container>
+          </select>
+          <label>Pergunta</label>
+          <input type="text" required [ngModelOptions]="{ standalone: true }" [(ngModel)]="quests.pergunta"
+            placeholder="Digite aqui..." [ngClass]="{'invalid' : !validarCampo(quests.pergunta)}">
+          <ng-container *ngIf="quests.tipoPergunta !== 'texto'">
+            <div class="contQuestAlternativa">
+              <label>Alternativas</label>
+              <ng-container *ngFor="let alternativa of quests.alternativas ; let altIndex = index; trackBy: trackByFn">
+                <div class="contAlternativa">
+                  <input type="text" required [ngModelOptions]="{ standalone: true }"
+                    [(ngModel)]="formModel[questIndex].alternativas[altIndex]" [name]="questIndex + '_' + altIndex"
+                    placeholder="Digite aqui...">
+                  <button class="buttonExcluir" (click)="apagarAlternativa(questIndex, altIndex)">Apagar</button>
+                </div>
+              </ng-container>
+              <button class="buttonAdd" (click)="adicionarAlternativa(questIndex)">Adicionar alternativas</button>
+            </div>
+          </ng-container>
+          <button type="button" class="buttonExcluir" (click)="excluirPergunta(questIndex)"> Excluir Pergunta</button>
+        </div>
+      </ng-container>
+      <button type="button" class="buttonAdd" (click)="adicionarPergunta()">Adicionar pergunta</button>
+    </div>
+    <div class="btns">
+      <button *ngIf="isEdit" class="btn-editar" (click)="editarVaga()">Atualizar</button>
+      <button *ngIf="!isEdit" class="btn-adicionar" (click)="adicionarVaga()">Adicionar</button>
+    </div>
+  </form>
+</div>
+
+<ng-container *ngIf="erroNoForm">
+  <app-modal-erro-form [dados]="userNotFoundOrSucess" (onClose)="closeModalErroForm($event)"></app-modal-erro-form>
+</ng-container>
+<ng-container *ngIf="mensagemUsuario">
+  <app-modal-utility [dados]="userNotFoundOrSucess"></app-modal-utility>
+</ng-container>
