@@ -1,5 +1,7 @@
 # ProjetoVagas
 
+Projeto desenvolvido em agosto/2023, com ênfase ao aprendizado.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.5.
 
 ## Development server
